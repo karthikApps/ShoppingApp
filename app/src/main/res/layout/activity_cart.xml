@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.shoppingapp.CartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/no_cart_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:text="@string/no_product_in_cart"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/cart_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/checkout_relative"
+            android:layout_margin="@dimen/xxhdpi_5"/>
+
+
+        <RelativeLayout
+            android:id="@+id/checkout_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/xxhdpi_10">
+
+            <TextView
+                android:id="@+id/cart_sub_total_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sub_total"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/segoeuib_1"
+                android:textSize="@dimen/t_xxh_16"
+                android:textColor="@color/color_txt_color"/>
+
+            <TextView
+                android:id="@+id/cart_checkout_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorPrimary"
+                android:text="@string/check_out"
+                android:textSize="@dimen/t_xxh_16"
+                android:padding="@dimen/xxhdpi_10"
+                android:textColor="@color/white"
+                android:fontFamily="@font/segoeuib_1"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

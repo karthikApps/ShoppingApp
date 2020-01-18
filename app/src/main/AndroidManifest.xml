@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.ecommerce">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_shopping_cart"
+        android:label="@string/app_name"
+        android:logo="@drawable/ic_shopping_cart"
+        android:roundIcon="@drawable/ic_shopping_cart"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.android.shoppingapp.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.android.shoppingapp.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.android.shoppingapp.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.shoppingapp.ProductListActivity"
+            android:label="back"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.android.shoppingapp.ProductDetailActivity"
+            android:label="Back"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.android.shoppingapp.CartActivity" />
+        <activity android:name="com.android.shoppingapp.WishListActivity" />
+        <activity android:name="com.android.shoppingapp.CheckOutActivity" />
+
+        <service android:name="com.android.shoppingapp.Global.FirebaseInstanceIdClass">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.android.shoppingapp.HistoryActivity" />
+        <activity android:name="com.android.shoppingapp.CategoryActivity" />
+        <activity android:name="com.android.shoppingapp.ProfileActivity" />
+        <activity android:name="com.android.shoppingapp.AboutActivity" />
+        <activity android:name="com.android.shoppingapp.PaymentSuccessActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

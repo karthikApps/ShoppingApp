@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:ignore="NamespaceTypo"
+    card_view:cardCornerRadius="5dp">
+
+    <TextView
+        android:id="@+id/prod_id_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="1sp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/list_prod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="@dimen/xxhdpi_10"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/prod_img"
+                    android:layout_width="@dimen/xxhdpi_50"
+                    android:layout_height="@dimen/xxhdpi_50"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/stock_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/cat_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/pos_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prod_name_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="left|center"
+                            android:layout_marginRight="@dimen/xxhdpi_5"
+                            android:layout_toLeftOf="@+id/list_prod_spl_txt"
+                            android:fontFamily="@font/segoeuib_1"
+                            android:gravity="center|left"
+                            android:text="Product Name"
+                            android:textColor="@color/color_txt_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/list_prod_spl_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/xxhdpi_10"
+                            android:background="@drawable/round_rect"
+                            android:drawableLeft="@drawable/ic_star"
+                            android:drawablePadding="@dimen/xxhdpi_5"
+                            android:paddingLeft="@dimen/xxhdpi_5"
+                            android:paddingRight="@dimen/xxhdpi_5"
+                            android:paddingBottom="3dp"
+                            android:text="3.5"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/t_xxh_12" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_5">
+
+                    <TextView
+                        android:id="@+id/product_desc_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="Description" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

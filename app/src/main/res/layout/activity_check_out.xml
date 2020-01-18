@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent_layout"
+    tools:context="com.android.shoppingapp.CheckOutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/xxhdpi_10"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_details"
+        android:fontFamily="@font/segoeuib_1"
+        android:textColor="@color/color_txt_color"
+        android:textSize="@dimen/t_xxh_18"/>
+
+    <RadioGroup
+        android:id="@+id/payment_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/xxhdpi_10"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cash_on_delivery"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/online_payment"/>
+
+    </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/default_address_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/addr_detail"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:fontFamily="@font/segoeuib_1"
+            android:textColor="@color/color_txt_color"
+            android:textSize="@dimen/t_xxh_18"/>
+
+        <TextView
+            android:id="@+id/checkout_address_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:fontFamily="@font/segoeui_1"
+            android:textColor="@color/color_txt_color"
+            android:textSize="@dimen/t_xxh_16"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Card Details"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:fontFamily="@font/segoeuib_1"
+            android:textColor="@color/color_txt_color"
+            android:textSize="@dimen/t_xxh_18"/>
+
+        <TextView
+            android:id="@+id/checkout_card_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/address"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:fontFamily="@font/segoeui_1"
+            android:textColor="@color/color_txt_color"
+            android:textSize="@dimen/t_xxh_16"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/xxhdpi_10"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/checkout_submit_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/segoeuib_1"
+            android:textSize="@dimen/t_xxh_18"
+            android:text="@string/checkout"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

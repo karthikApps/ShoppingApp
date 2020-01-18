@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="5dp"
+    app:ignore="NamespaceTypo">
+
+    <TextView
+        android:id="@+id/prod_id_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="1sp"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/list_prod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/prod_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_launcher" />
+                <ImageView
+                    android:id="@+id/stock_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <com.like.LikeButton
+                    android:id="@+id/hotel_like_img"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:icon_type="heart"
+                    app:icon_size="15dp"
+                    android:layout_margin="@dimen/xxhdpi_5"
+                    app:circle_start_color="@color/colorPrimary"
+                    app:like_drawable="@drawable/ic_like"
+                    app:unlike_drawable="@drawable/ic_unlike"
+                    app:dots_primary_color="@color/colorAccent"
+                    app:dots_secondary_color="@color/colorPrimary"
+                    app:circle_end_color="@color/colorAccent"
+                    android:background="@drawable/round_shadow"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/cat_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/pos_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="3"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/prod_name_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:text="Product Name"
+                            android:gravity="center|left"
+                            android:layout_marginRight="@dimen/xxhdpi_5"
+                            android:layout_toLeftOf="@+id/list_prod_remove_txt"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/segoeuib_1"
+                            android:textColor="@color/color_txt_color"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/list_prod_remove_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:gravity="center"
+                            android:layout_centerVertical="true"
+                            android:textSize="@dimen/t_xxh_12"
+                            android:layout_marginRight="@dimen/xxhdpi_10"
+                            android:fontFamily="@font/segoeuib_1"
+                            android:text="Remove"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/product_rating_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/round_rect"
+                        android:drawableLeft="@drawable/ic_star"
+                        android:drawablePadding="@dimen/xxhdpi_5"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="@dimen/xxhdpi_5"
+                        android:paddingRight="@dimen/xxhdpi_5"
+                        android:text="3.5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/t_xxh_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/xxhdpi_5">
+
+                    <TextView
+                        android:id="@+id/product_desc_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:text="Description"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/prod_new_amt_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center|left"
+                        android:gravity="left|center"
+                        android:text="$123"
+                        android:fontFamily="@font/segoeui_1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"/>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/xxhdpi_5"
+                        android:layout_marginBottom="@dimen/xxhdpi_5"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/item_add_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/item_qty_txt"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/circle_white"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/item_minus_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

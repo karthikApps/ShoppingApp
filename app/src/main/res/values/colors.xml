@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#F3807A</color>
+    <color name="colorPrimaryDark">#F3807A</color>
+    <color name="colorAccent">#E1B06D</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="lit_grey">#EEEEEE</color>
+    <color name="v_lit_grey" tools:ignore="MissingDefaultResource">#FAFAFA</color>
+    <color name="grey">#9E9E9E</color>
+    <color name="dim">#99000000</color>
+
+    <color name="color_gold">#E1B06D</color>
+    <color name="color_orange">#F3807A</color>
+    <color name="color_txt_color">#212121</color>
+    <color name="color_grey">#8A8A8A</color>
+
+    <color name="black_transparent">#2b000000</color>
+
+    <color name="toolbar_txt_color">#4CAF50</color>
+    <color name="name_color">#FFCA28</color>
+
+    <color name="lit_black">#212121</color>
+    <color name="yet_to_start">#009688</color>
+    <color name="inprogress">#FF9800</color>
+    <color name="pending">#F44336</color>
+    <color name="completed">#4CAF50</color>
+
+
+
+</resources>

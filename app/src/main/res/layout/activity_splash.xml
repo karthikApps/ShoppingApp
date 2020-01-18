@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context="com.android.shoppingapp.SplashActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/splash_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/xxhdpi_10"
+            android:src="@drawable/logo"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/template"
+            android:layout_below="@+id/splash_img"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/t_xxh_16"
+            android:fontFamily="@font/segoeui_1"
+            android:layout_marginTop="@dimen/xxhdpi_10"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/xxhdpi_75"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/loading_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loading"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/xxhdpi_10"
+                    android:layout_above="@+id/progressBar"/>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/progressBar"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:visibility="visible"
+                    app:indicatorColor="@color/white"
+                    app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/login_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/xxhdpi_50"
+                android:paddingRight="@dimen/xxhdpi_50"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/splash_login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/xxhdpi_20"
+                    android:background="@drawable/rect_bor"/>
+
+                <Button
+                    android:id="@+id/splash_register_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:layout_margin="@dimen/xxhdpi_20"
+                    android:background="@drawable/rect_bor"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_account"
+            android:icon="@drawable/ic_account"
+            android:title="@string/my_profile" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_category"
+            android:title="@string/category" />
+        <item
+            android:id="@+id/nav_product_filter"
+            android:icon="@drawable/ic_category"
+            android:title="@string/product_filter" />
+        <item
+            android:id="@+id/nav_wish_list"
+            android:icon="@drawable/ic_wish_list"
+            android:title="@string/wishlist" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_cart"
+            android:title="@string/shopping_cart" />
+        <item
+            android:id="@+id/nav_gift"
+            android:icon="@drawable/ic_gift"
+            android:title="@string/my_orders" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/contact_us" />
+        <item
+            android:id="@+id/nav_privacy_policy"
+            android:icon="@drawable/ic_privacy_policy"
+            android:title="@string/privacy_policy" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_about_us"
+            android:title="@string/about_us" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
+    </group>
+
+</menu>
